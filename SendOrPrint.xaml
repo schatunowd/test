@@ -1,0 +1,14 @@
+﻿<Window x:Class="WpfApp1.SendOrPrint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="SendOrPrint" Height="154.8" Width="368.8">
+    <Grid>
+        <Button Content="Отправить &#xD;&#xA;по почте" Margin="27,42,222.4,33.6" Click="Button_Click"/>
+        <Button HorizontalContentAlignment="Center" Content="Распечатать&#xD;&#xA;" Margin="209,42,45.4,33.6" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="WpfApp1.currency"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Параметры валютного отчета" Height="285.2" Width="535.2">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="227*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="269*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10,10,9.8,10" Grid.ColumnSpan="3">
+            <WrapPanel Margin="3">
+                <Label Content="_Имя:" Target="{Binding ElementName=txtName}" />
+                <TextBox Name="txtName" Width="158" />
+                <Label Content=" E-mail:" Target="{Binding ElementName=txtMail}" />
+                <TextBox Name="txtMail" Width="158" />
+            </WrapPanel>
+
+            <WrapPanel Margin="3">
+                <Label Content="Дата начала отчета:" />
+                <DatePicker Name="beginCalendar" SelectedDate="{Binding Path=dateBegin}" />
+                <Label Content="Дата окончания отчета:" />
+                <DatePicker Name="endCalendar" SelectedDate="{Binding Path=dateEnd}"/>
+            </WrapPanel>
+            <Label Content="Выберите валюту:" Target="{Binding ElementName=currencyName}" Margin="0,0,373.8,0" />
+        </StackPanel>
+        <ComboBox Name="currencyBox" Height="30" Grid.ColumnSpan="3" Margin="142,80,159.8,145.2" >
+            <TextBlock>USD</TextBlock>
+            <TextBlock>RUB</TextBlock>
+            <TextBlock>EUR</TextBlock>
+            <TextBlock>CNY</TextBlock>
+        </ComboBox>
+        <Button Grid.ColumnSpan="3" Content="Сформировать отчет" HorizontalAlignment="Left" Margin="170,195,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click"/>
+
+    </Grid>
+</Window>
